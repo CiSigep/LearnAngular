@@ -1,0 +1,11 @@
+<h1>
+  {{title}}
+</h1>
+<ul>
+	<li  *ngFor="let war of warriors" (click)="select(war)">{{war.name}}
+		<ul [hidden]="!isSelected(war)">
+			<li>Age: {{war.age}}</li>
+			<li>Weapon: {{war.weapon}}</li>
+		</ul>
+	</li>
+</ul>
