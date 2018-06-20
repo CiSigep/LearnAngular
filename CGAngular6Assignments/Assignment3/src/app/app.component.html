@@ -1,0 +1,4 @@
+<button (click)="displayDetailsToggle()">Display Details</button>
+<p *ngIf="display">You clicked it!</p>
+<p *ngFor="let l of loggedClicks; index as i" [ngClass]="{ blueBack: i >= 4  }"
+   [ngStyle]="{ color: indexColor(i) }">{{ l }}</p>
