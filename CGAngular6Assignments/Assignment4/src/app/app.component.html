@@ -1,0 +1,18 @@
+<div class="container">
+  <h1>Odd &amp; Even</h1>
+  <div class="row">
+    <div class="col-xs-12">
+      <app-game-control (gameNumber)="onNumberEmitted($event)"></app-game-control>
+    </div>
+  </div>
+  <hr>
+  <div class="row">
+    <div class="col-xs-12">
+      <app-odd *ngFor="let od of oddElements" [gameValue]="od"></app-odd>
+    </div>
+    <div class="col-xs-12">
+      <app-even *ngFor="let ev of evenElements" [gameValue]="ev"></app-even>
+    </div>
+  </div>
+</div>
+
